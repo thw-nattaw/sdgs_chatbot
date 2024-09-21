@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SDGs Knowledge agent</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  </head>
+  <body>
+    <div class="content">
+        <h1>ともちゃんボット</h1>
+        <h2>ともに未来へ歩こう〜サスティナブルに〜</h2>
+        <p>このチャットボットは、日本の持続可能な開発目標（SDGs）に関する行動についてもっと知りたいあなたのためのチャットボットです。<br />
+        このチャットボットでは、こんなことができます：<br />
+        ・SDGsについて一般的な質問に対応<br />
+        ・SDGsの行動に関して新しいアイデアを生み出す<br />
+        ・日本政府が推進する、持続可能な社会に向けた取り組み（計画や統計データを含む）<br />
+        &emsp;現在、第2「飢餓をゼロに」, 12「つくる責せき任にん つかう責せき任」, 14「海の豊ゆたかさを守ろう」ゴールに関する情報が充実していますが、今後さらに多くのゴールに関する情報を追加していく予定です。<br />
+        <br />
+        例質問：<br />
+        <br />
+        「SDGsについて教えてください」<br />
+        「持続可能な漁業を達成するために日本が展開した重要な施策は何ですか？」<br />
+        「地方公共団体の率先的取組と国による促進に関する温室効果ガス排出量を削減行動は何ですか。」<br />
+        「2015年のまぐろの産出額はどれくらいですか？」<br />
+        <br />
+        ぜひ、SDGsについて質問してみてください！</p><br />
+    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+    　project-id=#projectid
+      agent-id=#agentid
+      language-code="en"
+      max-query-length="-1">
+      <df-messenger-chat-bubble
+       chat-title="ともちゃんボット"
+       placeholder-text="SDGsのことなら何でも聞いてください"
+       expand="true">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Google Sans;
+        --df-messenger-chat-background: #f3f6fc;
+        --df-messenger-message-user-background: #d3e3fd;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+  </body>
+</html>
