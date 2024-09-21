@@ -1,0 +1,7 @@
+functions-framework==3.*
+Flask
+SQLAlchemy
+PyMySQL
+cloud-sql-python-connector
+google-cloud-secret-manager
+google-cloud-aiplatform >=1.52.0
