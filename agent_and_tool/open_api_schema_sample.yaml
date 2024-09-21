@@ -5,7 +5,7 @@ info:
     This API generates a response about fish types caught from oceans in Japan based on the data retrieved from statistics data.
   version: 1.0.0
 servers:
-  - url: 'https://asia-northeast1-sdg-gc-hackathon.cloudfunctions.net/text-to-sql-to-text'
+  - url: #url
 paths:
   /caughtfish:
     get:
