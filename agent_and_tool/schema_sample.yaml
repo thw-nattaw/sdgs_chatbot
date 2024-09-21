@@ -1,0 +1,52 @@
+openapi: 3.0.2
+info:
+  title: Ocean Caught Fish in Japan Generator API
+  description: |
+    This API generates a response about fish types caught from oceans in Japan based on the data retrieved from statistics data.
+  version: 1.0.0
+servers:
+  - url: 'https://asia-northeast1-sdg-gc-hackathon.cloudfunctions.net/text-to-sql-to-text'
+paths:
+  /caughtfish:
+    get:
+      summary: Generate response about the number of fish types caught from Ocean in Japan
+      description: |
+        Receives input from the user as query parameters
+      parameters:
+        - name: input
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The user's question about fish type caught from Ocean in Japan
+      responses:
+        '200':
+          description: Successfully generated and retrieved data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+                    description: The final response text generated based on the retrieved data
+        '400':
+          description: Bad request, invalid input or table name
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message describing the issue
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message describing the issue
