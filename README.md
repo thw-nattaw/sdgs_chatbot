@@ -18,6 +18,7 @@ EN follows JP
 3. goapp
 このフォルダには、Go で記述されたフロントエンド コードが含まれています。Google App Engine でホストされています。
 
+デモ　https://sdg-gc-hackathon.an.r.appspot.com/
 __________________
 
 # Tomo-Chan Chatbot
@@ -32,8 +33,10 @@ This folder contains the architecture of the agent, the prompt for each agent, a
 The default agent is connected to the agents for each goal. In the demo version, agents for SDG Goals 2, 12, and 14 are available, as well as a general SDGs agent for overall knowledge and other SDG goals.
 Each goal-specific agent can call policy tools, which are PDF files of Japanese government policies stored in the datastore, and statistical data agents, which are OpenAPI tools. The OpenAPI tools are connected to Cloud Run functions that can access tabular data in Cloud SQL.
 
-2. cloud_function
+Demo https://sdg-gc-hackathon.an.r.appspot.com/
+
+3. cloud_function
 This folder contains Python code deployed in a Google Cloud Run function, which can be called by the agent (Statistical Data Tool). It receives the path to the table name and the input parameters. Next, SQL code is generated using Gemini 1.5 Flash. The data retrieved from the Cloud SQL database is used to generate a response for the user.
 
-3. goapp
+4. goapp
 This folder contains front-end code written in Go. It is hosted on Google App Engine.
