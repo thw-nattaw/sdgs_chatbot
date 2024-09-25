@@ -40,5 +40,3 @@ This folder contains Python code deployed in a Google Cloud Run function, which 
 This folder contains front-end code written in Go. It is hosted on Google App Engine.
 
 Demo https://sdg-gc-hackathon.an.r.appspot.com/
-
-Demo https://sdg-gc-hackathon.an.r.appspot.com/
